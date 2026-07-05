@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "description": "WebRTC-приложение для захвата и передачи видео со звуком",
+  "repository": "git@github.com:Aleksandr-86/webrtc-app-ts.git",
+  "author": "Aleksandr-86",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",

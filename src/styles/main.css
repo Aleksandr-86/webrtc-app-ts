@@ -1,6 +1,2 @@
 @import './base.css';
-
-#app {
-  display: flex;
-  padding: 0.9375rem;
-}
+@import 'tailwindcss';

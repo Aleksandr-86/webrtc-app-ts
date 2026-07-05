@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { ref } from 'vue'
 
 const captureBtnRef = ref<HTMLButtonElement | null>(null)
@@ -66,16 +66,12 @@ async function initScreenCapture() {
 </script>
 
 <template>
-  <div>
+  <div class="flex h-screen w-screen">
     <video ref="videoElRef"></video>
 
     <div>
-      <button :disabled="isStreamActive" ref="captureBtnRef" @click="initScreenCapture">
-        Захватить экран
-      </button>
-      <button v-if="isStreamActive" ref="stopBtnRef" @click="stopScreenCapture">
-        Прекратить захват экрана
-      </button>
+      <button ref="captureBtnRef" :disabled="isStreamActive" @click="initScreenCapture">Захватить экран</button>
+      <button v-if="isStreamActive" ref="stopBtnRef" @click="stopScreenCapture">Прекратить захват экрана</button>
     </div>
   </div>
 </template>
